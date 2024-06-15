@@ -36,7 +36,7 @@ def setup_teardown(request):
 
     decoded_username = decode(username)
     decoded_password = decode(password)
-    pdb.set_trace()
+   
     wait.until(expected_conditions.visibility_of_element_located(login_page.username_input_field))
     driver.find_element(*login_page.username_input_field).click()
     driver.find_element(*login_page.username_input_field).send_keys(decoded_username)
