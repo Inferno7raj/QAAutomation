@@ -2,9 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from config import *
-from pages.home_page import Homepage
 from pages.login_page import LoginPage
-from pages.admin_page import Admin
+from pages.product_browsing_page import ProductBrowsing
+from pages.product_cart import CartCheckout
+from pages.sign_up_page import Signup
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 import allure
@@ -26,11 +27,14 @@ class Test_case_01:
             customer_unit = test_data['customer_unit']
             
         wait = WebDriverWait(self.driver, 30)
-
-        login_page = LoginPage(self.driver)
-        home_page = Homepage(self.driver)
-        admin_page = Admin(self.driver)
-
-        admin_page.navigate_to_admin_page()
+     
+        product_browse  = ProductBrowsing(self.driver) 
+        product_cart_validate = CartCheckout(self.driver)      
+        
+        product_browse.product_browsing()
+        
+        product_name = product_browse.adding_products_to_cart()
+        
+        product_cart_validate.checkout_process(product_name)
 
 

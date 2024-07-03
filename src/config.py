@@ -20,12 +20,15 @@ DOWNLOAD_DIR = os.path.join(BASE_DIR, 'downloads')
 ## EXCEL_DATA_FILES parameter holds dir path for excel_data_files
 EXCEL_DATA_FILES = os.path.join(BASE_DIR, 'excel_data_files')
 
-site_url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+site_url = "https://www.demoblaze.com/"
 
 # site_url = "https://www.google.com"
 
 username = "QWRtaW4="  # Admin
 password = "YWRtaW4xMjM="   # admin123
+
+username_01 = "dXBzd2luZ191c2VyXzAx"
+password_01 = "aW5mZXJub19yYWo="
 
 
 def decode(input_string):

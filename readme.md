@@ -1,6 +1,6 @@
 # Download the latest version of python
 
-# Install drivers if you you want to use the locally.
+# Install browser drivers to use the locally.
 
 # Install selenium 
 pip install selenium==4.9.0
